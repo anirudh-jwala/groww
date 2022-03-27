@@ -73,12 +73,27 @@ class _AuthLoaderState extends State<AuthLoader>
                     textStyle: investingOptionStyle,
                   ),
                   FadeAnimatedText(
+                    'Direct Mutual Funds',
+                    duration: investingOptionDuration,
+                    textStyle: investingOptionStyle,
+                  ),
+                  FadeAnimatedText(
                     'ETFs',
                     duration: investingOptionDuration,
                     textStyle: investingOptionStyle,
                   ),
                   FadeAnimatedText(
-                    'Direct Mutual Funds',
+                    'Gold',
+                    duration: investingOptionDuration,
+                    textStyle: investingOptionStyle,
+                  ),
+                  FadeAnimatedText(
+                    'US Stocks',
+                    duration: investingOptionDuration,
+                    textStyle: investingOptionStyle,
+                  ),
+                  FadeAnimatedText(
+                    'Fixed Deposits',
                     duration: investingOptionDuration,
                     textStyle: investingOptionStyle,
                   ),

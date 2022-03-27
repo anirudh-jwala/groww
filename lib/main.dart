@@ -22,9 +22,23 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xFF0abb92),
         fontFamily: 'Roboto',
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          selectedItemColor: Color(0xFF96A8FD),
+          unselectedItemColor: Colors.grey,
+          selectedLabelStyle: TextStyle(
+            fontSize: 12.0,
+          ),
+        ),
       ),
       darkTheme: ThemeData.dark().copyWith(
         primaryColor: const Color(0xFF0abb92),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          selectedItemColor: Color(0xFF96A8FD),
+          unselectedItemColor: Colors.grey,
+          selectedLabelStyle: TextStyle(
+            fontSize: 12.0,
+          ),
+        ),
       ),
       home: const AuthenticationPage(),
       debugShowCheckedModeBanner: false,

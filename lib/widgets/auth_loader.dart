@@ -21,31 +21,26 @@ class _AuthLoaderState extends State<AuthLoader>
 
     controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 2500),
+      duration: const Duration(milliseconds: 3000),
     )..repeat();
 
-    sizeAnimation = Tween(begin: 0.0, end: 45.0).animate(
+    sizeAnimation = Tween(begin: 0.0, end: 55.0).animate(
       CurvedAnimation(
         parent: controller!,
-        curve: Curves.easeInOut,
+        curve: Curves.ease,
       ),
     );
   }
 
   @override
   void dispose() {
-    super.dispose();
     controller!.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    const investingOptionStyle = TextStyle(
-      fontWeight: FontWeight.w500,
-      fontSize: 18.0,
-      color: Color(0xFF7A7C8A),
-    );
-    const investingOptionDuration = Duration(milliseconds: 2500);
+    const investingOptionDuration = Duration(milliseconds: 2200);
 
     return AnimatedBuilder(
       animation: controller!,
@@ -57,7 +52,7 @@ class _AuthLoaderState extends State<AuthLoader>
               decoration: const BoxDecoration(
                 color: Color(0xFF00D09C),
               ),
-              height: 15.0,
+              height: 10.0,
               width: sizeAnimation!.value,
             ),
             const SizedBox(height: 10.0),
@@ -70,32 +65,32 @@ class _AuthLoaderState extends State<AuthLoader>
                   FadeAnimatedText(
                     'Stocks',
                     duration: investingOptionDuration,
-                    textStyle: investingOptionStyle,
+                    textStyle: Theme.of(context).textTheme.bodyMedium,
                   ),
                   FadeAnimatedText(
                     'Direct Mutual Funds',
                     duration: investingOptionDuration,
-                    textStyle: investingOptionStyle,
+                    textStyle: Theme.of(context).textTheme.bodyMedium,
                   ),
                   FadeAnimatedText(
                     'ETFs',
                     duration: investingOptionDuration,
-                    textStyle: investingOptionStyle,
+                    textStyle: Theme.of(context).textTheme.bodyMedium,
                   ),
                   FadeAnimatedText(
                     'Gold',
                     duration: investingOptionDuration,
-                    textStyle: investingOptionStyle,
+                    textStyle: Theme.of(context).textTheme.bodyMedium,
                   ),
                   FadeAnimatedText(
                     'US Stocks',
                     duration: investingOptionDuration,
-                    textStyle: investingOptionStyle,
+                    textStyle: Theme.of(context).textTheme.bodyMedium,
                   ),
                   FadeAnimatedText(
                     'Fixed Deposits',
                     duration: investingOptionDuration,
-                    textStyle: investingOptionStyle,
+                    textStyle: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
               ),
